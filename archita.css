@@ -1,0 +1,313 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+.portfolio-container{
+    min-height: 100vh;
+    width: 100%;
+    display:flex;
+    position: relative;
+}
+.navlist{
+    display: flex;
+    gap:3.5rem;
+    
+    height: 15vh;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+
+}
+.navlist li{
+    list-style: none;
+}
+.navlist li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color:white;
+    position: relative;
+}
+.left-container, .right-container{
+    height:100vh;
+    display:flex;
+    align-items:center;
+}
+.left-container{
+    background: rgb(19, 18, 18);
+    width:70%;
+    padding-left:3rem;
+}
+.right-container{
+    background:  linear-gradient( -45deg,rgba(7, 83, 97, 0.747),rgb(19, 18, 18) 70%);
+    width:30%;
+}
+.icons .fa-brands:hover{
+    background: linear-gradient(white,rgba(7, 83, 97, 0.747));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    
+
+}
+.icons{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    gap:3rem;
+    color:white;
+    font-size:2rem;
+    cursor: pointer;
+    
+    
+}
+.content{
+    padding-left:3rem;
+}
+
+.content .intro{
+    font-size: 1.5rem;
+    color:white;
+}
+
+
+.content .intro span{
+    color:rgba(23, 177, 204, 0.747);
+    font-family: "Oleo Script", system-ui;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.content .text h1{
+    color: rgba(23, 177, 204, 0.747);
+    font-size: 40px;
+    line-height:2 rem;
+    height: 50px;
+    border-right: 1.5px solid;
+    width: 330px;
+    white-space: nowrap;
+    overflow:hidden;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    animation: typing 5s infinite ,  cursor .4s step-end infinite alternate;
+}
+@keyframes cursor{
+    50% { border-color: transparent}
+}
+@keyframes typing{
+    from{width:0}
+}
+
+
+
+.content .detail{
+    font-size: 1.1rem;
+    color:white;
+    max-width: 34rem;
+    margin: 1.1rem 0 3rem 0;
+    line-height:1.8rem;
+}
+.btn-container button{
+    border-style:solid;
+    border-width:2px;
+    border-radius: 8px;
+    border-color:rgba(23, 177, 204, 0.747);
+    font-size: 1.1rem;
+    padding: .8rem 1.5rem;
+    cursor: pointer;
+    transition: .5s ease;
+
+
+}
+.btn-container .resume{
+    background-color:#17b1ccbe;
+    color:black;
+}
+.btn-container .project{
+    background: transparent;
+    color: rgba(23, 177, 204, 0.747);
+    margin-left:2rem;
+}
+.btn-container .resume:hover{
+    background: transparent;
+    color:  rgba(23, 177, 204, 0.747);
+}
+.btn-container .project:hover{
+    background:  rgba(23, 177, 204, 0.747);
+    color: black ;
+}
+.design .circle{
+    aspect-ratio:1;
+    position:absolute;
+    border-radius:50%;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%,-50%); /*last 3 lines syntax can be used to make anything centered*/
+}
+
+.circle:nth-child(1){
+    background: linear-gradient( 90deg, transparent 50%,rgb(22, 22, 22) 50%);
+    width: 30rem;
+    
+}
+.circle:nth-child(2){
+    width: 28rem;
+    background-image: url("image/profile.jpeg");
+    background-position: center;
+    background-size:100%
+    background-repeat: no-repeat;
+    border: .1rem solid white;
+}    
+
+
+
+.navlist li a::after ,.navlist .active::after{
+    content:" "; 
+    position: absolute;
+    background: white;
+    width: 100%;
+    height:.1rem;
+    left:0;
+    bottom:-5px;
+    transform: scalex(0);
+    transform-origin: bottom right;
+    transition: transform 0.5s;
+}
+.navlist li a:hover::after , .navlist .active::after{
+    transform:scalex(1);
+    transform-origin: bottom left;
+}
+.About{
+    background-color: rgb(19, 18, 18) ;
+    color: white;
+    padding-left:2rem;
+    padding-right:2rem;
+}
+.About .Aboutme{
+    padding:1.8rem;
+    margin-bottom:1.8rem;
+    color:white;
+    text-align:center;
+    font-size: 30px;
+    text-decoration: underline;
+
+}
+.About-container{
+    background-color:rgba(7, 83, 97, 0.747);
+    color:white;
+    border-radius:2rem;
+    text-align:center;
+    cursor: pointer;
+    transition:0.3s ease-in-out;
+}
+.About-container:hover{
+    background: transparent;
+    color:rgba(180, 226, 235, 0.747);
+    transform: scale(1.03);
+    border-radius: 3rem;
+    border-style: solid;
+
+}
+
+
+
+
+
+
+.services{
+    background-color: rgb(19, 18, 18) ;
+    color: white;
+    padding-left:2rem;
+    padding-right:2rem;
+    height: 110vh;
+
+
+
+}
+.services .heading{
+    padding:1.8rem;
+    margin-bottom:1.8rem;
+    color:white;
+    text-align:center;
+    font-size: 30px;
+    text-decoration: underline;
+}
+.service-container{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.service-box{
+    background-color: rgba(7, 83, 97, 0.747);
+    color:white;
+    height: 240px;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition:0.3s ease-in-out;
+}
+.service-box:hover{
+    background: transparent;
+    color:rgba(180, 226, 235, 0.747);
+    transform: scale(1.03);
+    border-radius: 3rem;
+    border-style: solid;
+    border-color: rgba(180, 226, 235, 0.747) ;
+
+}
+.service-box .service-info{
+    display:flex;
+    flex-direction: column;
+    text-align:left;
+    max-height:200px;
+    justify-content:center;
+    align-items: baseline;
+    padding: 5rem;
+
+}
+::-webkit-scrollbar{
+    width:10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color:rgba(23, 177, 204, 0.747);;
+}
+::-webkit-scrollbar-track{
+    background-color:rgb(19, 18, 18);
+    width:50px;
+}
+
+
+
+
+.bottombar{
+    position:relative;
+    display: flex;
+    gap:3.5rem;
+    height: 15vh;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: rgb(19, 18, 18);
+
+}
+.bottombar li{
+    list-style: none;
+}
+.bottombar li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color:white;
+    position: relative;
+}
+.bottombar li a:hover{
+    color:rgba(23, 177, 204, 0.747);
+}
